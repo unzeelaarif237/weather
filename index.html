@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>weather</title>
+ 
+    <style>
+        body, html {
+            margin: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+         background-image: url(/asset/bckground.jpg);
+        }
+
+        .gradient-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation: weatherChange 10s infinite alternate;
+        }
+
+        @keyframes weatherChange {
+            0% {
+                background: linear-gradient(to right, #87CEFA, #00BFFF); /* Clear Sky */
+            }
+            33% {
+                background: linear-gradient(to right, #2F4F4F, #1E90FF); /* Rainy */
+            }
+            66% {
+                background: linear-gradient(to right, #B0C4DE, #778899); /* Cloudy */
+            }
+            100% {
+                background: linear-gradient(to right, #FFD700, #FF6347); /* Sunset */
+            }
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="gradient-background"></div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Card</title>
+<style>
+    /* body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .weather-card {
+        width: 300px;
+        height: 200px;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 40px auto;
+    }
+    .weather-card img {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    } */
+</style>
+<a href="asset/style.css"></a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+<script src="index.js/app.js"></script>
+<script>
+var weather = prompt("What's your favorite weather? (Welcome, Cloudy,Summer, Winter, Autumn, Spring,Worng)");
+if (weather === "Welcome") {
+    document.write(`
+        <div class="card" style="width: 18rem; align-items: center;">
+           <img src="asset/img/welcome.gif" class="card-img-top" alt="..." >
+            <div class="card-body">
+                <h5 class="card-title">Hello Dear </h5>
+                <p class="card-text">"Welcome To Weather Information Service"</p>
+           
+            </div>
+        </div>
+    `);
+}
+else if (weather === "Cloudy") {
+    document.write(`
+        <div class="card" style="width: 18rem; align-items: center;">
+             <img src="asset/img/cloudy.jpg" class="card-img-top" alt="..." >
+            <div class="card-body">
+                <h5 class="card-title">Hello Cloudy </h5>
+                <p class="card-text">"Underneath the clouds, we found our own sunshine. Cloudy days and cozy hugs."</p>
+           
+            </div>
+        </div>
+    `);
+}
+else if(weather === "Summer"){
+    document.write(`
+        <div class="card" style="width: 18rem;">
+         <img src="asset/img/summer.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Hello summer </h1>
+                <p class="card-text">"Golden rays dance on the shimmering sea,
+In summer's embrace, we feel wild and free."</p>
+           
+            </div>
+        </div>
+    `);
+}
+else if(weather === "Winter"){
+    document.write(`
+        <div class="card" style="width: 18rem;">
+       <img src="asset/img/winter.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Hello Winter </h1>
+                <p class="card-text">The weather becomes very dry during winter, so we must stay well-hydrated. Festivals like Christmas and New Year take place during winter.</p>
+           
+            </div>
+        </div>
+    `);
+}
+else if(weather === "Autumn"){
+    document.write(`
+        <div class="card" style="width: 18rem;">
+     <img src="asset/img/autumn-icegif-5.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Hello Autumn</h1>
+                <p class="card-text">The leaves turn vibrant shades of red, orange, and yellow as they fall from the trees. Autumn is often associated with harvest festivals and the preparation for the colder months ahead.
+            </div>
+        </div>
+    `);
+}
+else if(weather === "Spring"){
+    document.write(`
+        <div class="card" style="width: 18rem;">
+<img src="asset/img/spring.gif" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Hello Spring</h1>
+                <p class="card-text">Flowers begin to bloom, filling the air with vibrant colors and sweet fragrances. Spring is a season of renewal, symbolizing new beginnings and the return of life after winter's chill
+            </div>
+        </div>
+    `);
+}
+else{
+    document.write(`
+        <div class="card" style="width: 18rem;">
+<img src="asset/img/download.jpeg" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Ooops sorry</h1>
+                <p class="card-text">This is wrong data</p>
+            </div>
+        </div>
+    `);
+}
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+
